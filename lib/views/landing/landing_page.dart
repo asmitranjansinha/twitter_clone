@@ -1,19 +1,16 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:twitter_clone/constants/app_buttons.dart';
+import 'package:twitter_clone/views/base/custom_app_buttons.dart';
 
 import '../../constants/images.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
+  static const route = 'landing';
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       height: size.height,
       width: size.width,
       child: Scaffold(
@@ -85,7 +82,7 @@ class LandingPage extends StatelessWidget {
             ),
             const TwitterButton(isIcon: false, buttonText: "Create Account"),
             SizedBox(
-              height: size.height / 35,
+              height: size.height / 40,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 22, right: 40),
@@ -134,19 +131,26 @@ class LandingPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: size.height / 16,
+              height: size.height / 18,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 38),
               child: Row(
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     "Have an account already? ",
                     style: TextStyle(color: Colors.grey, fontSize: 15),
                   ),
-                  Text(
-                    "Log in",
-                    style: TextStyle(color: Colors.blue, fontSize: 15),
+                  InkWell(
+                    splashColor: Colors.blue,
+                    onTap: () {},
+                    child: const Padding(
+                      padding: EdgeInsets.all(1.0),
+                      child: Text(
+                        "Log in",
+                        style: TextStyle(color: Colors.blue, fontSize: 15),
+                      ),
+                    ),
                   ),
                 ],
               ),
