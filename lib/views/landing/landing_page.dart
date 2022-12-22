@@ -39,10 +39,13 @@ class LandingPage extends StatelessWidget {
             SizedBox(
               height: size.height / 4,
             ),
-            const TwitterButton(
+            FilledButton(
               isIcon: true,
               buttonText: "Continue with Google",
               buttonIcon: Images.google,
+              width: size.width / 1.2,
+              isActive: true,
+              height: size.height / 20,
             ),
             SizedBox(
               height: size.height / 115,
@@ -80,7 +83,13 @@ class LandingPage extends StatelessWidget {
             SizedBox(
               height: size.height / 115,
             ),
-            const TwitterButton(isIcon: false, buttonText: "Create Account"),
+            FilledButton(
+              isIcon: false,
+              buttonText: "Create Account",
+              width: size.width / 1.2,
+              isActive: true,
+              height: size.height / 20,
+            ),
             SizedBox(
               height: size.height / 40,
             ),
