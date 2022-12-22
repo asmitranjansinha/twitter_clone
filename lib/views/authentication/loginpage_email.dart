@@ -1,13 +1,12 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/base/custom_app_buttons.dart';
 import 'package:twitter_clone/views/base/custom_text_field.dart';
+import 'package:twitter_clone/views/landing/landing_page.dart';
 
 import '../../constants/images.dart';
 
 class LoginPageEmail extends StatefulWidget {
-  LoginPageEmail({super.key});
+  const LoginPageEmail({super.key});
   static const route = 'login';
 
   @override
@@ -40,7 +39,8 @@ class _LoginPageEmailState extends State<LoginPageEmail> {
               centerTitle: true,
               leading: InkWell(
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, LandingPage.route, (route) => false);
                 },
                 child: Image.asset(
                   Images.close,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/views/authentication/loginpage_email.dart';
 import 'package:twitter_clone/views/base/custom_app_buttons.dart';
 
 import '../../constants/images.dart';
@@ -152,7 +153,9 @@ class LandingPage extends StatelessWidget {
                   ),
                   InkWell(
                     splashColor: Colors.blue,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, LoginPageEmail.route);
+                    },
                     child: const Padding(
                       padding: EdgeInsets.all(1.0),
                       child: Text(

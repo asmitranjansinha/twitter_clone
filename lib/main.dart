@@ -14,8 +14,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Twiiter Clone',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Chirp'),
-      home: LoginPageEmail(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: 'Chirp',
+        textTheme: const TextTheme(
+          subtitle1: TextStyle(color: Colors.white),
+        ),
+      ),
+      home: const LandingPage(),
+      routes: {
+        LandingPage.route: (context) => const LandingPage(),
+        LoginPageEmail.route: (context) => const LoginPageEmail(),
+      },
     );
   }
 }
