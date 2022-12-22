@@ -1,12 +1,21 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/base/custom_app_buttons.dart';
 import 'package:twitter_clone/views/base/custom_text_field.dart';
 
 import '../../constants/images.dart';
 
-class LoginPageEmail extends StatelessWidget {
-  const LoginPageEmail({super.key});
+class LoginPageEmail extends StatefulWidget {
+  LoginPageEmail({super.key});
   static const route = 'login';
+
+  @override
+  State<LoginPageEmail> createState() => _LoginPageEmailState();
+}
+
+class _LoginPageEmailState extends State<LoginPageEmail> {
+  bool isEmpty = false;
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +67,19 @@ class LoginPageEmail extends StatelessWidget {
                 SizedBox(
                   height: size.height / 40,
                 ),
-                const TwitterTextField(hintText: "Phone, email, or username"),
+                TwitterTextField(
+                    hintText: "Phone, email, or username",
+                    onChanged: (value) {
+                      if (value.isNotEmpty) {
+                        setState(() {
+                          isEmpty = true;
+                        });
+                      } else {
+                        setState(() {
+                          isEmpty = false;
+                        });
+                      }
+                    }),
               ],
             ),
             bottomNavigationBar: Container(
@@ -80,7 +101,7 @@ class LoginPageEmail extends StatelessWidget {
                       isIcon: false,
                       buttonText: "Next",
                       width: size.width / 6,
-                      isActive: false,
+                      isActive: isEmpty,
                       height: size.height / 22,
                     )
                   ],

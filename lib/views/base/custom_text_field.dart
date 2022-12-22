@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class TwitterTextField extends StatelessWidget {
   final hintText;
-  const TwitterTextField({super.key, required this.hintText});
+  late final onChanged;
+  TwitterTextField({super.key, required this.hintText, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class TwitterTextField extends StatelessWidget {
     return SizedBox(
       width: size.width / 1.1,
       child: TextFormField(
+          onChanged: onChanged,
           decoration: InputDecoration(
               labelText: hintText,
               labelStyle: const TextStyle(color: Colors.blueGrey),

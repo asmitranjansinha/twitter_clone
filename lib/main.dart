@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Twiiter Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Chirp'),
-      home: const LoginPageEmail(),
+      home: LoginPageEmail(),
     );
   }
 }
