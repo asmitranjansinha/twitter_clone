@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/authentication/loginpage_email.dart';
+import 'package:twitter_clone/views/authentication/sign_up.dart';
 import 'package:twitter_clone/views/base/custom_app_buttons.dart';
 
 import '../../constants/images.dart';
@@ -25,7 +26,7 @@ class LandingPage extends StatelessWidget {
         body: Column(
           children: [
             SizedBox(
-              height: size.height / 3.8,
+              height: size.height / 3.7,
             ),
             const Padding(
                 padding: EdgeInsets.only(left: 32, right: 32),
@@ -38,7 +39,7 @@ class LandingPage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 )),
             SizedBox(
-              height: size.height / 4,
+              height: size.height / 3.8,
             ),
             FilledButton(
               isIcon: true,
@@ -46,10 +47,10 @@ class LandingPage extends StatelessWidget {
               buttonIcon: Images.google,
               width: size.width / 1.2,
               isActive: true,
-              height: size.height / 20,
+              height: size.height / 22,
             ),
             SizedBox(
-              height: size.height / 115,
+              height: size.height / 150,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40),
@@ -82,42 +83,45 @@ class LandingPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: size.height / 115,
+              height: size.height / 150,
             ),
             FilledButton(
               isIcon: false,
               buttonText: "Create Account",
               width: size.width / 1.2,
               isActive: true,
-              height: size.height / 20,
+              height: size.height / 22,
+              onTap: () {
+                Navigator.pushNamed(context, SignUpPage.route);
+              },
             ),
             SizedBox(
               height: size.height / 40,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 22, right: 40),
+              padding: const EdgeInsets.only(left: 40, right: 40),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: const [
                   Text(
                     "By signing up, you agree to our ",
-                    style: TextStyle(color: Colors.grey, fontSize: 12.5),
+                    style: TextStyle(color: Colors.grey, fontSize: 13),
                   ),
                   Text(
                     "Terms",
-                    style: TextStyle(color: Colors.blue, fontSize: 12.5),
+                    style: TextStyle(color: Colors.blue, fontSize: 13),
                   ),
                   Text(
                     ", ",
-                    style: TextStyle(color: Colors.grey, fontSize: 12.5),
+                    style: TextStyle(color: Colors.grey, fontSize: 13),
                   ),
                   Text(
                     "Privacy Policy ",
-                    style: TextStyle(color: Colors.blue, fontSize: 12.5),
+                    style: TextStyle(color: Colors.blue, fontSize: 13),
                   ),
                   Text(
                     "and",
-                    style: TextStyle(color: Colors.grey, fontSize: 12.5),
+                    style: TextStyle(color: Colors.grey, fontSize: 13),
                   ),
                 ],
               ),
@@ -126,16 +130,16 @@ class LandingPage extends StatelessWidget {
               height: size.height / 160,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 38),
+              padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Row(
                 children: const [
                   Text(
                     "Cookie Use",
-                    style: TextStyle(color: Colors.blue, fontSize: 12.5),
+                    style: TextStyle(color: Colors.blue, fontSize: 13),
                   ),
                   Text(
                     ".",
-                    style: TextStyle(color: Colors.grey, fontSize: 12.5),
+                    style: TextStyle(color: Colors.grey, fontSize: 13),
                   ),
                 ],
               ),
@@ -144,12 +148,12 @@ class LandingPage extends StatelessWidget {
               height: size.height / 18,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 38),
+              padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Row(
                 children: [
                   const Text(
                     "Have an account already? ",
-                    style: TextStyle(color: Colors.grey, fontSize: 15),
+                    style: TextStyle(color: Colors.grey, fontSize: 15.5),
                   ),
                   InkWell(
                     splashColor: Colors.blue,
@@ -160,7 +164,7 @@ class LandingPage extends StatelessWidget {
                       padding: EdgeInsets.all(1.0),
                       child: Text(
                         "Log in",
-                        style: TextStyle(color: Colors.blue, fontSize: 15),
+                        style: TextStyle(color: Colors.blue, fontSize: 15.5),
                       ),
                     ),
                   ),

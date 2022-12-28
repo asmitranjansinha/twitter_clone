@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 
 class TwitterTextField extends StatelessWidget {
   final hintText;
-  late final onChanged;
-  TwitterTextField({super.key, required this.hintText, this.onChanged});
+  final onChanged;
+  const TwitterTextField({super.key, required this.hintText, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return SizedBox(
       width: size.width / 1.1,
+      height: 52,
       child: TextFormField(
           onChanged: onChanged,
           decoration: InputDecoration(

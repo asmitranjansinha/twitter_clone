@@ -51,7 +51,7 @@ class _LoginPageEmailState extends State<LoginPageEmail> {
             body: Column(
               children: [
                 SizedBox(
-                  height: size.height / 40,
+                  height: size.height / 50,
                 ),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
@@ -60,12 +60,12 @@ class _LoginPageEmailState extends State<LoginPageEmail> {
                     style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Chirp',
-                        fontSize: 24,
+                        fontSize: 27,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(
-                  height: size.height / 40,
+                  height: size.height / 55,
                 ),
                 TwitterTextField(
                     hintText: "Phone, email, or username",
@@ -83,10 +83,11 @@ class _LoginPageEmailState extends State<LoginPageEmail> {
               ],
             ),
             bottomNavigationBar: Container(
-              height: size.height / 11,
-              decoration: const BoxDecoration(
-                border:
-                    Border(top: BorderSide(color: Colors.blueGrey, width: 0.2)),
+              height: size.height / 12.5,
+              decoration: BoxDecoration(
+                border: Border(
+                    top: BorderSide(
+                        color: Colors.blueGrey.shade800, width: 0.2)),
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
