@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Twiiter Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.black,
         primarySwatch: Colors.blue,
         fontFamily: 'Chirp',
         textTheme: const TextTheme(
