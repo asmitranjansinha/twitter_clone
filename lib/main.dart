@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/constants/app_theme.dart';
 import 'package:twitter_clone/views/authentication/loginpage_email.dart';
 import 'package:twitter_clone/views/authentication/sign_up.dart';
 import 'package:twitter_clone/views/base/app_navigation_bar.dart';
@@ -16,15 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Twiiter Clone',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primarySwatch: Colors.blue,
-        fontFamily: 'Chirp',
-        textTheme: const TextTheme(
-          subtitle1: TextStyle(color: Colors.white),
-        ),
-
-      ),
+      theme: appTheme(),
       home: AppNavigation(),
       routes: {
         LandingPage.route: (context) => const LandingPage(),

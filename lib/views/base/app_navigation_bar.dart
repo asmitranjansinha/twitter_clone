@@ -14,7 +14,7 @@ class AppNavigation extends StatefulWidget {
 }
 
 class __AppNavigationStateState extends State<AppNavigation> {
-  final screen = [
+  final screens = [
     const TwitterHome(),
     const TwitterSearch(),
     const TwitterSpaces(),
@@ -33,7 +33,7 @@ class __AppNavigationStateState extends State<AppNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screen[selectedIndex],
+      body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
