@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../constants/images.dart';
+import '../../constants/app_assets.dart';
 import '../landing/landing_page.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -26,7 +26,7 @@ class SignUpPage extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.black,
               elevation: 0,
-              title: Image.asset(Images.twitter, scale: 20),
+              title: Image.asset(AppAssets.twitter, scale: 20),
               centerTitle: true,
               leading: InkWell(
                 onTap: () {
@@ -35,7 +35,7 @@ class SignUpPage extends StatelessWidget {
                 },
                 borderRadius: BorderRadius.circular(60 / 2),
                 child: Image.asset(
-                  Images.back,
+                  AppAssets.back,
                   scale: 23,
                 ),
               ),

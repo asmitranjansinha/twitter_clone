@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/authentication/loginpage_email.dart';
 import 'package:twitter_clone/views/authentication/sign_up.dart';
-import 'package:twitter_clone/views/base/custom_app_buttons.dart';
+import 'package:twitter_clone/views/widgets/custom_app_buttons.dart';
 
-import '../../constants/images.dart';
+import '../../constants/app_assets.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -20,7 +20,7 @@ class LandingPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
           elevation: 0,
-          title: Image.asset(Images.twitter, scale: 20),
+          title: Image.asset(AppAssets.twitter, scale: 20),
           centerTitle: true,
         ),
         body: Column(
@@ -44,7 +44,7 @@ class LandingPage extends StatelessWidget {
             FilledButton(
               isIcon: true,
               buttonText: "Continue with Google",
-              buttonIcon: Images.google,
+              buttonIcon: AppAssets.google,
               width: size.width / 1.2,
               isActive: true,
               height: size.height / 22,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/views/base/custom_app_buttons.dart';
-import 'package:twitter_clone/views/base/custom_text_field.dart';
+import 'package:twitter_clone/views/widgets/custom_app_buttons.dart';
+import 'package:twitter_clone/views/widgets/custom_text_field.dart';
 import 'package:twitter_clone/views/landing/landing_page.dart';
 
-import '../../constants/images.dart';
+import '../../constants/app_assets.dart';
 
 class LoginPageEmail extends StatefulWidget {
   const LoginPageEmail({super.key});
@@ -35,7 +35,7 @@ class _LoginPageEmailState extends State<LoginPageEmail> {
             appBar: AppBar(
               backgroundColor: Colors.black,
               elevation: 0,
-              title: Image.asset(Images.twitter, scale: 20),
+              title: Image.asset(AppAssets.twitter, scale: 20),
               centerTitle: true,
               leading: InkWell(
                 onTap: () {
@@ -43,7 +43,7 @@ class _LoginPageEmailState extends State<LoginPageEmail> {
                       context, LandingPage.route, (route) => false);
                 },
                 child: Image.asset(
-                  Images.close,
+                  AppAssets.close,
                   scale: 35,
                 ),
               ),

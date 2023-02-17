@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/views/authentication/loginpage_email.dart';
 import 'package:twitter_clone/views/authentication/sign_up.dart';
-import 'package:twitter_clone/views/base/navigation_bar.dart';
+import 'package:twitter_clone/views/base/app_navigation_bar.dart';
 import 'package:twitter_clone/views/landing/landing_page.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         ),
 
       ),
-      home: TwitterNavigation(),
+      home: AppNavigation(),
       routes: {
         LandingPage.route: (context) => const LandingPage(),
         LoginPageEmail.route: (context) => const LoginPageEmail(),

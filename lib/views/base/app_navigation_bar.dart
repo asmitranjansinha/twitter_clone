@@ -1,20 +1,19 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/constants/images.dart';
+import 'package:twitter_clone/constants/app_assets.dart';
 import 'package:twitter_clone/views/home/home_page.dart';
 import 'package:twitter_clone/views/inbox/inbox_page.dart';
 import 'package:twitter_clone/views/notification/notification_page.dart';
 import 'package:twitter_clone/views/search/search_page.dart';
 import 'package:twitter_clone/views/spaces/spaces_page.dart';
 
-class TwitterNavigation extends StatefulWidget {
-  const TwitterNavigation({super.key});
+class AppNavigation extends StatefulWidget {
+  const AppNavigation({super.key});
 
   @override
-  State<TwitterNavigation> createState() => _TwitterNavigationState();
+  State<AppNavigation> createState() => __AppNavigationStateState();
 }
 
-class _TwitterNavigationState extends State<TwitterNavigation> {
+class __AppNavigationStateState extends State<AppNavigation> {
   final screen = [
     const TwitterHome(),
     const TwitterSearch(),
@@ -36,40 +35,62 @@ class _TwitterNavigationState extends State<TwitterNavigation> {
     return Scaffold(
       body: screen[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        currentIndex: selectedIndex,
         onTap: onItemTapped,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
               icon: Image.asset(
-                Images.home,
+                AppAssets.homeIcon,
                 scale: 25,
               ),
-              label: ""),
+              activeIcon: Image.asset(
+                AppAssets.homeIconFilled,
+                scale: 25,
+              ),
+              label: "home"),
           BottomNavigationBarItem(
               icon: Image.asset(
-                Images.search,
+                AppAssets.searchIcon,
                 scale: 25,
               ),
-              label: ""),
+              activeIcon: Image.asset(
+                AppAssets.searchIconFilled,
+                scale: 25,
+              ),
+              label: "search"),
           BottomNavigationBarItem(
               icon: Image.asset(
-                Images.mic,
+                AppAssets.micIcon,
                 scale: 25,
               ),
-              label: ""),
+              activeIcon: Image.asset(
+                AppAssets.micIconFilled,
+                scale: 25,
+              ),
+              label: "spaces"),
           BottomNavigationBarItem(
               icon: Image.asset(
-                Images.notification,
+                AppAssets.bellIcon,
                 scale: 25,
               ),
-              label: ""),
+              activeIcon: Image.asset(
+                AppAssets.bellIconFilled,
+                scale: 25,
+              ),
+              label: "notifications"),
           BottomNavigationBarItem(
               icon: Image.asset(
-                Images.mail,
+                AppAssets.inboxIcon,
                 scale: 25,
               ),
-              label: "")
+              activeIcon: Image.asset(
+                AppAssets.inboxIconFilled,
+                scale: 25,
+              ),
+              label: "direct messages")
         ],
       ),
     );
