@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/constants/images.dart';
 import 'package:twitter_clone/views/home/home_page.dart';
@@ -7,7 +8,7 @@ import 'package:twitter_clone/views/search/search_page.dart';
 import 'package:twitter_clone/views/spaces/spaces_page.dart';
 
 class TwitterNavigation extends StatefulWidget {
-  TwitterNavigation({super.key});
+  const TwitterNavigation({super.key});
 
   @override
   State<TwitterNavigation> createState() => _TwitterNavigationState();
@@ -35,6 +36,7 @@ class _TwitterNavigationState extends State<TwitterNavigation> {
     return Scaffold(
       body: screen[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+
         onTap: onItemTapped,
         type: BottomNavigationBarType.fixed,
         items: [

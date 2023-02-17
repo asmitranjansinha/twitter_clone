@@ -17,12 +17,13 @@ class MyApp extends StatelessWidget {
       title: 'Twiiter Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.black,
+        scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.blue,
         fontFamily: 'Chirp',
         textTheme: const TextTheme(
           subtitle1: TextStyle(color: Colors.white),
         ),
+
       ),
       home: TwitterNavigation(),
       routes: {
